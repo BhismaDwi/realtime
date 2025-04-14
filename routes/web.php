@@ -16,6 +16,10 @@ Route::middleware('auth')->group(function () {
     Route::get('chat', function () {
         return view('chat');
     })->name('chat');
+
+    Route::get('private', function () {
+        return view('private');
+    })->name('private');
 }); 
 
 require __DIR__.'/auth.php';

@@ -16,7 +16,7 @@ class ChatComponent extends Component
 
     public function mount()
     {
-        $message = Message::all();
+        $message = Message::where('received', null)->get();
         foreach ($message as $msg) {
             $this->conversations[] = [
                 'username' => $msg->user->name,
